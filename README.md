@@ -1,2 +1,5 @@
 # blog
-记录下写的代码,不然感觉久了会忘
+
+## 文章
+
+1、[VueCLI3.x中接入Lottie动画.md](article/VueCLI3.x中接入Lottie动画.md)

@@ -1,0 +1,19 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "个人博客",
+  "scripts": {
+    "doc": "node scripts/doc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anotherso1a/blog.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anotherso1a/blog/issues"
+  },
+  "homepage": "https://github.com/anotherso1a/blog#readme"
+}
