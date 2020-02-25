@@ -16,12 +16,16 @@ lottie.loadAnimation({
 
 如果静态资源是png图片,UI没办法把png转为svg的情况下,该怎么处理?
 
-## 主要思路:
+## 主要思路
 
 1、排除url-loader对lottie需要引入资源的处理(需要判定特殊资源路径)
+
 2、使用file-loader对lottie资源做原始引入处理(需要判定特殊资源路径)
+
 3、编写组件,引入资源时将UI导出的data.json做二次处理,将资源本地路径变为线上路径,需要打印下lottie实例化出来的对象做分析
+
 4、使用requireContext对图片做批量引入处理,不这样的化需要每张图片单独引入,太麻烦
+
 5、实例化lottie,后面就是对lottie动画实例的各种操作了
 
 ## vue.config.js中的配置
