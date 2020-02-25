@@ -10,7 +10,7 @@ let article = path.resolve('article')
 let articles = fs.readdirSync(article).filter(sysFolderFilter).map((p, i) => {
   let art = path.relative(path.resolve('.'), p)
   return `${i+1}、[${art}](${path.join('article',art)})`
-}).join('\n')
+}).join('\n\n')
 
 //目录模板
 let template = path.resolve(__dirname, 'template.md')
