@@ -61,7 +61,6 @@ window.onload = () => {
     let emj = emoji[Math.floor(Math.random() * emoji.length)]
     let c = color[Math.floor(Math.random() * color.length)]
     text.textContent = emj
-    location.hash = emj
     text.style.cssText = `
       position: fixed;
       pointer-events: none;
