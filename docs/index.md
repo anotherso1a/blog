@@ -1,3 +1,7 @@
+---
+title: My First Page
+layout: default
+---
 <!doctype html>
 <html lang="en">
   <head>
