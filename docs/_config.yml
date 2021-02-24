@@ -1,4 +1,5 @@
 theme: jekyll-theme-tactile
+layouts_dir: none
 encoding: utf-8
 include: 
   - "article/*"
