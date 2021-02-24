@@ -1,8 +1,3 @@
----
-title: VueCLI3.x中接入Lottie动画
-layout: default
----
-
 # VueCLI3.x中接入Lottie动画
 
 使用[lottie-web](https://www.npmjs.com/package/lottie-web)插件
@@ -159,3 +154,5 @@ export default {
 };
 </script>
 ```
+
+<script src="/js/color-egg.js"></script>

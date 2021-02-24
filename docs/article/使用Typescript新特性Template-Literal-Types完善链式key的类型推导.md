@@ -1,8 +1,3 @@
----
-title: 使用Typescript新特性Template Literal Types完善链式key的类型推导
-layout: default
----
-
 # 使用Typescript新特性Template Literal Types完善链式key的类型推导
 
 ## 前言
@@ -520,10 +515,4 @@ type Intersection = FunctionsToIntersection<Fun> // { a: number } & { b: string 
 * [TS递归上限](https://github.com/microsoft/TypeScript/issues/30188)
 * [Mpx中的实现（前期）](https://github.com/didi/mpx/pull/631)
 
-
-
-
-
-
-
-
+<script src="/js/color-egg.js"></script>
