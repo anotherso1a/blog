@@ -9,7 +9,7 @@ let article = path.resolve('article')
 //文章们
 let articles = fs.readdirSync(article).filter(sysFolderFilter).map((p, i) => {
   let art = path.relative(path.resolve('.'), p)
-  return `${i+1}、[${art}](${path.join('article',art)})`
+  return `${i + 1}、[${art}](${path.join('../article', art)})`
 }).join('\n\n')
 
 //目录模板
@@ -18,7 +18,7 @@ let content = fs.readFileSync(template, 'utf8')
 //处理结果
 let resContent = content.replace('{{article}}', articles)
 //写入Readme
-let readme = path.resolve('README.md')
+let readme = path.resolve('docs/index.md')
 fs.writeFileSync(readme, resContent, 'utf8')
 
 console.log('目录生成成功~')
