@@ -1,4 +1,4 @@
-theme: jekyll-theme-slate
+theme: jekyll-theme-modernist
 encoding: utf-8
 include: 
   - "article/*"
