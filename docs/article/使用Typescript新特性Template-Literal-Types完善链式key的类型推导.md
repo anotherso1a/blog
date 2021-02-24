@@ -384,7 +384,7 @@ let final = dispatch('deeperActions.otherActions.finalAction', 'hello world') //
 
 ![](http://cdn.qiniu.archerk.com.cn/QQ20210128-162139-HD.gif)
 
-图片若加载失败请访问：http://cdn.qiniu.archerk.com.cn/QQ20210128-162139-HD.gif
+图片若加载失败请访问：[示例图片](http://cdn.qiniu.archerk.com.cn/QQ20210128-162139-HD.gif)
 
 ## 结尾
 
