@@ -1,3 +1,4 @@
 theme: jekyll-theme-tactile
 encoding: utf-8
-include: [article]
+include: 
+  - "article/*"
