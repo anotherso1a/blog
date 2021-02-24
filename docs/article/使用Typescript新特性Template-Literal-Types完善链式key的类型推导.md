@@ -1,3 +1,7 @@
+---
+layout: post
+title: Blogging Like a Hacker
+---
 # 使用Typescript新特性Template Literal Types完善链式key的类型推导
 
 ## 前言
