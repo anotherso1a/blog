@@ -56,7 +56,6 @@ window.onload = () => {
 
   document.addEventListener('click', e => {
     let text = document.createElement('div')
-    console.log(e)
     let x = e.x
     let y = e.y
     let emj = emoji[Math.floor(Math.random() * emoji.length)]
