@@ -384,6 +384,8 @@ let final = dispatch('deeperActions.otherActions.finalAction', 'hello world') //
 
 ![](http://cdn.qiniu.archerk.com.cn/QQ20210128-162139-HD.gif)
 
+图片若加载失败请访问：http://cdn.qiniu.archerk.com.cn/QQ20210128-162139-HD.gif
+
 ## 结尾
 
 其实 `getValueByPath` 这一部分的内容是有一些缺陷的，因为TS本身**限制了递归的次数**，当数据层级达到一定程度时，上文的推导会失效。在Mpx的建设中我们还对此做了一些优化，尽可能的**减少**了递归次数。
