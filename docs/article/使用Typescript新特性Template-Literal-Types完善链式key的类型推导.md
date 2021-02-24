@@ -1,3 +1,8 @@
+---
+title: 使用Typescript新特性Template Literal Types完善链式key的类型推导
+layout: default
+---
+
 # 使用Typescript新特性Template Literal Types完善链式key的类型推导
 
 ## 前言
