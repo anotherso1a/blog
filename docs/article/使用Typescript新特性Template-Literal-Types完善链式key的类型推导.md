@@ -516,3 +516,6 @@ type Intersection = FunctionsToIntersection<Fun> // { a: number } & { b: string 
 * [Mpx中的实现（前期）](https://github.com/didi/mpx/pull/631)
 
 <script src="/js/color-egg.js"></script>
+<script>
+  window.__emoji = [ "Template Literal Types", "Covariance", "Contravariance", "UnionToIntersection", "Typescript", "Distributive conditional types", "ChainKeys", "Mpx", "Store", "ReturnType"]
+</script>
