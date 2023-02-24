@@ -531,20 +531,20 @@ export type Level2 = [
 ]
 ```
 
-完整实例见：https://github.com/anotherso1a/blog/tree/master/examples/ts-box-game
+完整实例见：[https://github.com/anotherso1a/blog/tree/master/examples/ts-box-game](https://github.com/anotherso1a/blog/tree/master/examples/ts-box-game)
 
 ## 游玩实况
 
 ![](https://dpubstatic.udache.com/static/dpubimg/RKtV2nBniPt_O_4whkK6V.png)
 
-视频见：https://github.com/anotherso1a/blog/blob/master/assets/video_ts_box_game.mp4
+视频见：[https://github.com/anotherso1a/blog/blob/master/assets/video_ts_box_game.mp4](https://github.com/anotherso1a/blog/blob/master/assets/video_ts_box_game.mp4)
 
 > 除了有点费手之外还ok..
 
 ## 参考
 
-1. `ToNumber`方法： https://github.com/microsoft/TypeScript/issues/42938
-2. 使用 `extends` 限定 `infer` 类型： https://www.typescriptlang.org/docs/handbook/release-notes/typescript-4-8.html
-3. 关于TS中递归报错： https://github.com/microsoft/TypeScript/issues/35156
-4. 阵列编程： https://zh.wikipedia.org/zh-hans/%E9%98%B5%E5%88%97%E7%BC%96%E7%A8%8B
-5. 推箱子： https://zh.wikipedia.org/zh-sg/%E5%80%89%E5%BA%AB%E7%95%AA
+1. `ToNumber`方法：[https://github.com/microsoft/TypeScript/issues/42938](https://github.com/microsoft/TypeScript/issues/42938)
+2. 使用 `extends` 限定 `infer` 类型：[https://www.typescriptlang.org/docs/handbook/release-notes/typescript-4-8.html](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-4-8.html)
+3. 关于TS中递归报错：[https://github.com/microsoft/TypeScript/issues/35156](https://github.com/microsoft/TypeScript/issues/35156)
+4. 阵列编程：[https://zh.wikipedia.org/zh-hans/%E9%98%B5%E5%88%97%E7%BC%96%E7%A8%8B](https://zh.wikipedia.org/zh-hans/%E9%98%B5%E5%88%97%E7%BC%96%E7%A8%8B)
+5. 推箱子：[https://zh.wikipedia.org/zh-sg/%E5%80%89%E5%BA%AB%E7%95%AA](https://zh.wikipedia.org/zh-sg/%E5%80%89%E5%BA%AB%E7%95%AA)
