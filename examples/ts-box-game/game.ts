@@ -99,29 +99,22 @@ type RerenderSymbols<T extends ControlIns> = {
 type PlayerLike = Player | PlayerOn
 type BoxLike = Box | BoxIn
 type BlankLike = Blank | Boom
-type TreeLike = Tree | undefined // undefined为边界，也不可推动和进入
 
 // 处理 '🎆' 的移动，返回移动后当前格显示的内容
 type MoveBoxIn<T extends ControlIns> = 
-  // 后方是Player时，才会向前移动
-  T['-1'] extends PlayerLike
+  // 后方是Player且前方是空地时，才会向前移动
+  //! 类似于 && 条件符
+  [T['-1'], T['1']] extends [PlayerLike, BlankLike]
     // 前进，根据游戏条件，在前方只有可能是 '🎆''🌲''📦''💣''🌫️'
-    ? T['1'] extends TreeLike | BoxLike // 前方不可推行
-        ? T['0'] // 保持不动
-        // : T['1'] extends Blank | Boom // 前面可推行
-        : PlayerOn
-    : T['0']
+    ? PlayerOn // 前方可推行
+    : T['0'] // 保持不动
 
 // 处理 '📦' 的移动，返回移动后当前格显示的内容
 type MoveBox<T extends ControlIns> = 
-  // 后方是Player时，才会向前移动
-  T['-1'] extends PlayerLike
-    // 前进，根据游戏条件，在前方只有可能是 '🎆''🌲''📦''💣''🌫️'
-    ? T['1'] extends TreeLike | BoxLike // 前方不可推行
-        ? T['0'] // 保持不动
-        // : T['1'] extends Blank | Boom // 前面可推行
-        : Player
-    : T['0']
+  // 后方是Player且前方是空地时，才会向前移动
+  [T['-1'], T['1']] extends [PlayerLike, BlankLike]
+    ? Player
+    : T['0'] // 保持不动
 
 // 处理 '🌝' 的移动，返回移动后当前格显示的内容
 type MovePlayer<T extends ControlIns> = 
@@ -146,7 +139,6 @@ type MoveBoom<T extends ControlIns> =
   // Boom本身无法移动，只需要判断后方来物并且更新当前内容即可
   T['-1'] extends PlayerLike // 后方是玩家
     ? PlayerOn // 则展示玩家站在Boom中的样子
-    //! 类似于 && 条件符
     : [T['-1'], T['-2']] extends [BoxLike, PlayerLike] // 后方是箱子+Player的组合，组合判断一下
       ? BoxIn // 是则表示箱子会被推动，展示箱子进洞的样子
       : T['0'] // 其他情况则保持原样
@@ -156,7 +148,6 @@ type MoveBlank<T extends ControlIns> =
   // blank本身无法移动，只需要判断后方来物并且更新当前内容即可
   T['-1'] extends PlayerLike // 后方是玩家
     ? Player // 则展示玩家站在blank中的样子
-    //! 类似于 && 条件符
     : [T['-1'], T['-2']] extends [BoxLike, PlayerLike] // 后方是箱子+Player的组合，组合判断一下
       ? Box // 是则表示箱子会被推动，展示箱子进洞的样子
       : T['0'] // 其他情况则保持原样
