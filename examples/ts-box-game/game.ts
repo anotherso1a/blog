@@ -128,10 +128,8 @@ type MovePlayer<T extends ControlIns> =
   // 判断前方是否可移动
   T['1'] extends BlankLike
     ? Blank
-    : T['1'] extends BoxLike // 前方有可推物
-      ? T['2'] extends BlankLike // 判断更前方是否有阻挡
-        ? Blank // 没有则推动成功，原地变空地
-        : T['0'] // 有阻挡则无法推进，保持原样
+    : [T['1'], T['2']] extends [BoxLike, BlankLike] // 判断前方有可推物 且 更前方无阻挡
+      ? Blank // 没有则推动成功，原地变空地
       : T['0'] // 其他情况，如墙体，地图边缘等，无法移动，保持不变
 
 // 处理 '🌚' 的移动，返回移动后当前格显示的内容
@@ -139,10 +137,8 @@ type MovePlayerOn<T extends ControlIns> =
   // 判断前方是否可移动
   T['1'] extends BlankLike
     ? Boom
-    : T['1'] extends BoxLike // 前方有可推物
-      ? T['2'] extends BlankLike // 判断更前方是否有阻挡
-        ? Boom // 没有则推动成功，原地变空地
-        : T['0'] // 有阻挡则无法推进，保持原样
+    : [T['1'], T['2']] extends [BoxLike, BlankLike] // 判断前方有可推物 且 更前方无阻挡
+      ? Boom // 没有则推动成功，原地变空地
       : T['0'] // 其他情况，如墙体，地图边缘等，无法移动，保持不变
 
 // 处理 '💣' 的移动，返回移动后当前格显示的内容
@@ -176,18 +172,6 @@ type ProcessFrame<T extends Symbols[][], D extends 'foward' | 'back'> = {
       ? ProcessLine<T[K], D>
       : T[K]
 }
-
-// replace line in level
-// type ReplaceLine<T extends Symbols[][], I extends number, L> = {
-//   [K in keyof T]: ToNumber<K> extends I ? L : T[K]
-// }
-// type ReplaceLine<T extends Symbols[][], I extends number, L, Result extends Symbols[][] = []> =
-// I extends Result['length']
-//   ? [...Result, ...T]
-//   : T extends [infer F extends Symbols[], ...infer R extends Symbols[][]]
-//     ? ReplaceLine<R, I, L, [...Result, F]>
-//     : never
-
 
 type Render<T, R extends any[] = []> = T extends Symbols[][]
   ? T['length'] extends R['length']
